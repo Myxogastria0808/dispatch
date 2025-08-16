@@ -17,6 +17,13 @@ DSTを使用することで、実行時にサイズが決定される型を扱�
 これにより、実行時に異なる型のメソッドを呼び出すことが可能になる。
 また、ロックアップする際に、vtable（仮想関数テーブル）を使用する。
 
+- Sized TraitおよびDSTについて
+
+Sized Traitは、コンパイル時にサイズが決定される型を表すトレイトである。
+Rustでは、参照やほとんどの型には暗黙のうちに実装されている。
+このSized Traitが実装されていない型は、DSTと呼ばれていて、
+fat pointerを通して扱われる。
+
 ## 静的ディスパッチ
 
 静的ディスパッチは、コンパイル時にメソッドを選択する仕組みである。
@@ -40,3 +47,9 @@ https://tourofrust.com/81_ja.html
 - Rustのジェネリクスについて
 
 https://qiita.com/Leapcell/items/805a6f7af4d03c8bb6df
+
+- DSTとSized Traitについて
+
+https://zenn.dev/woden/articles/36b367559161b9
+
+https://zenn.dev/senk/articles/0e57e6da138e77
